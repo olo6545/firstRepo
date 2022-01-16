@@ -1,4 +1,4 @@
-# Wykorzstyanie FastAPI
+# LADR - Wykorzstyanie FastAPI
 
 Data: 16.01.2022
 
@@ -8,7 +8,7 @@ Data: 16.01.2022
 ----
 
 ## Kontekst
-* Wykorzystujemy FastAPI
+* Preferujemy Python
 ----
 
 ## Decyzja

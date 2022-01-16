@@ -1,2 +1,2 @@
 # firstRepo
-pierwsze repozytorium
+* First Repository

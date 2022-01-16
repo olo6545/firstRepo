@@ -6,7 +6,11 @@ import uvicorn
 app = FastAPI()
 system = os.uname()
 
-
+products = {
+    "XD-12" : "Klawiatura FURY",
+    "MOUSE-1" : "Myszka USB",
+    "CPU-0" : "PRocesor"
+}
 
 @app.get("/")
 async def root():
@@ -32,5 +36,17 @@ async def systeminfo():
     return {
             "osname": system}
 
+@app.get("/product/{product_id}")
+async def product_info(product_id: str):
+    if product_id in products:
+        opis = products[product_id]
+    else:
+        opis = f"Niestety nie ma towaru ({product_id})"
+    return{
+        "Podano": product_id,
+        "Opis": opis
+    }
+
 
 uvicorn.run(app)
+
